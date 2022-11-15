@@ -48,6 +48,7 @@ int main(int argc, char **argv)
 	 "n", "r", "d", "min", "max", "mean", "stddev (%)", "MiB/s");
   
   run_benchmark("BASE",   dotprod_base, n, r);
+  run_benchmark("BASEx8",   dotprod_base_x8, n, r);
   
   //
   return 0;

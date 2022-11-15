@@ -76,7 +76,7 @@ void dgemm_unrollx8(f64 *restrict a, f64 *restrict b, f64 *restrict c, u64 n)
 	{
 	  const f64 _a_ = a[i * n + k];
 	  
-	  for (u64 j = 0; j < n; j += UNROLL4)
+	  for (u64 j = 0; j < n; j += UNROLL8)
 	    {
 	      c[i * n + j]     +=  _a_ * b[k * n + j];
 	      c[i * n + j + 1] +=  _a_ * b[k * n + j + 1];
